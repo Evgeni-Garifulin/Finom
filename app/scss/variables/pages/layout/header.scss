@@ -1,0 +1,34 @@
+:root {
+
+	// Logo
+	--header-logo-box-bg-cl: var(--cl-purple-100);
+	--header-logo-default-cl: var(--cl-graphite-450);
+	--header-logo-hover-cl: var(--cl-white);
+
+	// Social
+	--header-social-default-cl: var(--cl-graphite-450);
+	--header-social-hover-cl: var(--cl-white);
+
+	// Menu
+	--header-menu-default-cl: var(--cl-graphite-450);
+	--header-menu-hover-cl: var(--cl-white);
+
+	// Menu mobile
+	--header-menu-mobile-bg-cl: var(--cl-graphite-80);
+
+	// Burger
+	--header-mobile-default-cl: var(--cl-graphite-400);
+	--header-mobile-hover-cl: var(--cl-white);
+
+	// Content
+	--header-content-figure-border-cl: var(--cl-purple-100);
+	--header-content-title-cl: var(--cl-white);
+
+	// Bottom
+	--header-bottom-border-cl: var(--cl-graphite-100);
+
+	// Column
+	--header-column-link-default-cl: var(--cl-graphite-450);
+	--header-column-link-hover-cl: var(--cl-white);
+	--header-column-cl: var(--cl-graphite-400);
+}

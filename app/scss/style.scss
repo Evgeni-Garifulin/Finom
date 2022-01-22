@@ -1,0 +1,18 @@
+// ===============================================
+// Main root of project styles
+// ===============================================
+
+@import './variables/variables';
+
+// Layout
+@import './pages/layout/layout';
+@import './pages/layout/header';
+@import './pages/layout/footer';
+
+@import './components/fonts';
+
+// Grid system
+@import './utilities/grid/bootstrap-grid';
+
+// Index
+@import './pages/index/hero';

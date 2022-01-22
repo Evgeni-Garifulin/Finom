@@ -1,0 +1,39 @@
+/* stylelint-disable scss/selector-nest-combinators */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--body-bg-cl);
+	color: var(--body-cl);
+	font-family: var(--ff-montserrat);
+	font-size: var(--body-fz);
+	line-height: var(--body-lh);
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.page-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+	background-color: var(--ca-black-60);
+}
+
+.container {
+	width: 100%;
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
