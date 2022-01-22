@@ -1,2 +1,2 @@
-# finom
+# Finom
 Test project for Finom
