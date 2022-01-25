@@ -1,4 +1,28 @@
 include ../mixins/svg
 include ../mixins/picture
 
-
+footer.footer
+	.container
+		.footer__inner
+			.footer__top
+				a.logo.link-light.footer__logo(href='/' aria-label='Finom')
+					+svg('logo', '107', '23', 'icon logo__icon', 'Finom')
+				.footer__social
+					a.link-info.footer__social-link(aria-label='Facebook' href='#')
+						+svg('fb', '9', '18', 'icon footer__social-icon')
+					a.link-info.footer__social-link(aria-label='Instagram' href='#')
+						+svg('insta', '18', '18', 'icon footer__social-icon')
+					a.link-info.footer__social-link(aria-label='Linkedin' href='#')
+						+svg('ldin', '18', '18', 'icon footer__social-icon')
+			.footer__content
+				a.footer__content-link(aria-label='Apple store' href='#')
+					img.d-block.footer__content-icon(src='img/index/footer/app-store.svg' alt='Apple store')
+				a.footer__content-link(aria-label='Google play market' href='#')
+					img.d-block.footer__content-icon(src='img/index/footer/g-play.svg' alt='Google play market')
+			.footer__terms
+				p.text-info.text-sm.footer__terms-text &copy;&nbsp;2021 Finom
+				a.link-info.text-sm.footer__terms-link(aria-label='Terms and Conditions' href='#') Terms &amp;&nbsp;Conditions
+				a.link-info.text-sm.footer__terms-link(aria-label='Privacy Policy' href='#') Privacy Policy
+				a.link-info.text-sm.footer__terms-link(aria-label='Cookie Policy' href='#') Cookie Policy
+			.footer__bottom
+				p.text-info.text-xs.footer__bottom-text FINOM (trade name of&nbsp;PNL Fintech B.V.), the company registered under number 74178784, office at&nbsp;Jachthavenweg 109&nbsp;H, 1081&nbsp;KM Amsterdam, the Netherlands, in&nbsp;France licenced under REGAFI identifier 88291&nbsp;as an&nbsp;agent of&nbsp;Treezor SAS (nr&nbsp;807&nbsp;465&nbsp;059).

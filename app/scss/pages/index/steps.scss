@@ -1,0 +1,94 @@
+.steps {
+	margin-bottom: 40px;
+	color: var(--steps-cl);
+
+	&__inner {
+		@include media-breakpoint-down(xl) {
+			padding: 92px 20px 60px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 72px 20px 40px;
+		}
+
+		padding: 112px 20px;
+		border-radius: 24px;
+		background-color: var(--steps-bg-cl);
+	}
+
+	&__title {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 48px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 32px;
+		}
+
+		margin-bottom: 64px;
+		text-align: center;
+	}
+
+	&__content {
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		display: flex;
+		justify-content: center;
+	}
+
+	&__card {
+		@include media-breakpoint-down(lg) {
+			margin: 0 auto 32px !important;
+		}
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 179px;
+
+		&:not(:last-child) {
+			margin-right: 32px;
+
+			&::after {
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
+
+				content: '';
+				position: absolute;
+				top: 23%;
+				left: 95%;
+				width: 54px;
+				height: 16px;
+				background-image: url('../img/index/steps/arrow-long.svg');
+			}
+		}
+	}
+
+	&__card-img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 120px;
+		margin-bottom: 12px;
+		border: 1px solid var(--steps-card-border-cl);
+		border-radius: 92px;
+		color: var(--steps-card-icon-cl);
+	}
+
+	&__card-description {
+		text-align: center;
+	}
+
+	&__card-title {
+		--steps-card-title-ff: var(--ff-metropolis);
+
+		font-family: var(--steps-card-title-ff);
+	}
+}

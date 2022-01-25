@@ -1,8 +1,4 @@
-// import { swiperInterior } from './swiperInterior';
-// import { swiperMenuHookah, swiperMenuSigars, swiperMenuAlcohol } from './swiperMenu';
-// import { swiperNews } from './swiperNews';
-// import { burgerMenuShow } from './burgerMenu'
-// import { nenuShow } from './menuShow';
+import { carousel } from '../libs/bootstrap/bootstrap.bundle.min.js';
+import { sliderPhotoActivate } from './sliderPhoto'
 
-// burgerMenuShow();
-// nenuShow();
+sliderPhotoActivate ();

@@ -1,0 +1,145 @@
+.control {
+	margin-bottom: 40px;
+
+	&__inner {
+		@include media-breakpoint-down(xl) {
+			padding: 92px 70px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 72px 50px;
+		}
+
+		padding: 112px 90px;
+		border-radius: 24px;
+		background-color: var(--control-bg-cl);
+	}
+
+	&__title {
+		max-width: 1180px;
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	&__item {
+		@include media-breakpoint-down(lg) {
+			flex-direction: column;
+		}
+
+		display: flex;
+		align-items: center;
+		height: 504px;
+
+		&::after {
+			content: '';
+			display: block;
+			margin: 0 auto;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			text-align: center;
+		}
+
+		&--cards {
+			height: 100%;
+
+			&::after {
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+
+				order: -1;
+				width: 500px;
+				height: 422px;
+				background-image: url('../img/index/control/virtual-cards.png');
+			}
+		}
+
+		&--visibility {
+			&::after {
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+
+				@include media-breakpoint-down(lg) {
+					order: -1;
+				}
+
+				width: 504px;
+				height: 464px;
+				background-image: url('../img/index/control/visibility.png');
+			}
+		}
+
+		&--bookkeeping {
+			&::after {
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+
+				order: -1;
+				width: 500px;
+				height: 422px;
+				background-image: url('../img/index/control/bookkeeping.png');
+			}
+		}
+
+		&--connection {
+			&::after {
+				@include media-breakpoint-down(lg) {
+					order: -1;
+				}
+
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+
+				width: 500px;
+				height: 422px;
+				background-image: url('../img/index/control/connection.png');
+			}
+		}
+
+		&--subscribtions {
+			&::after {
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+
+				order: -1;
+				width: 500px;
+				height: 422px;
+				background-image: url('../img/index/control/subscribtions.png');
+			}
+		}
+	}
+
+	&__item-text {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 40px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid var(--control-text-border-cl);
+			text-align: center;
+		}
+
+		width: 50%;
+	}
+
+	&__item-title {
+		margin-bottom: 12px;
+	}
+
+	&__button {
+		@include media-breakpoint-down(lg) {
+			max-width: 142px;
+			padding: 16px 32px;
+		}
+
+		display: block;
+		max-width: 164px;
+		margin: 0 auto;
+		padding: 18px 40px;
+	}
+}

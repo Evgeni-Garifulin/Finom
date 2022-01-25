@@ -10,6 +10,12 @@
 // Components
 @import './components/colors';
 @import './components/typography';
+@import './components/button';
+@import './components/dropdown';
 
 // Sections
 @import './pages/index/hero';
+@import './pages/index/features';
+@import './pages/index/control';
+@import './pages/index/steps';
+@import './pages/index/about';

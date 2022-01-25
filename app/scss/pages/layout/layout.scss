@@ -10,9 +10,20 @@ html {
 }
 
 body {
+	@include media-breakpoint-down(xl) {
+		--body-fz: (--fz-md-lg);
+	}
+
+	@include media-breakpoint-down(lg) {
+		--body-fz: (--fz-sm-lg);
+	}
+
+	--body-fz: var(--fz-lg);
+	--body-lh: var(--lh-lg);
+
 	background-color: var(--body-bg-cl);
 	color: var(--body-cl);
-	font-family: var(--ff-montserrat);
+	font-family: var(--ff-lato);
 	font-size: var(--body-fz);
 	line-height: var(--body-lh);
 }
@@ -33,7 +44,13 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 1220px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0 20px;
+}
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	vertical-align: middle;
 }

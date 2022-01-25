@@ -1,0 +1,172 @@
+.hero {
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	background-color: var(--hero-bg-cl);
+
+
+	&__inner {
+		@include media-breakpoint-down(xl) {
+			padding: 182px 0 92px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 142px 0 52px;
+		}
+
+		display: flex;
+		padding: 202px 0 112px;
+	}
+
+	&__massage {
+		z-index: 2;
+	}
+
+	&__massage-title {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 18px;
+		}
+
+		max-width: 600px;
+		margin-bottom: 24px;
+	}
+
+	&__massage-text {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 18px;
+		}
+
+		max-width: 600px;
+		margin-bottom: 24px;
+	}
+
+	&__massage-list {
+		max-width: 600px;
+		list-style-type: none;
+	}
+
+	&__massage-item {
+		position: relative;
+		padding-left: 24px;
+
+		&:not(:last-child) {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 8px;
+			}
+
+			margin-bottom: 12px;
+		}
+
+		&:last-child {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 26px;
+			}
+
+			margin-bottom: 32px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 35%;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #222B55;
+		}
+	}
+
+	&__massage-button {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 26px;
+			padding: 14px 32px;
+		}
+
+		margin-bottom: 32px;
+		padding: 18px 40px;
+	}
+
+	&__content {
+		@include media-breakpoint-down(xl) {
+			background-size: contain;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 45%;
+		}
+
+		position: absolute;
+		top: 40px;
+		right: 0;
+		width: 55%;
+		height: 100%;
+		background-image: url('../img/index/hero/applepay.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__content-button {
+		@include media-breakpoint-down(xl) {
+			width: 140px;
+			height: 140px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 100px;
+			height: 100px;
+		}
+
+		position: absolute;
+		top: 40%;
+		left: 40%;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		background-color: var(--hero-video-button-bg-cl);
+		box-shadow: 23px 24px 18px rgba(34, 43, 85, .16);
+		cursor: pointer;
+		transition: box-shadow .3s;
+
+		&:hover {
+			box-shadow: 12px 8px 16px rgb(34 43 85 / 35%);
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&__content-sticker {
+		--hero-sticker-ff: var(--ff-metropolis);
+		--hero-sticker-lh: var(--lh-md);
+		--hero-sticker-fw: var(--fw-b);
+
+		position: absolute;
+		bottom: 18%;
+		left: 8%;
+		display: flex;
+		align-items: center;
+		max-width: 288px;
+		padding: 20px 20px 20px 22px;
+		border-radius: 20px;
+		background-color: var(--hero-sticker-bg-cl);
+		box-shadow: 0 4px 8px rgba(34, 43, 85, .04), 0 16px 24px rgba(34, 43, 85, .1);
+		color: var(--hero-sticker-cl);
+		font-family: var(--hero-sticker-ff);
+		font-weight: var(--hero-sticker-fw);
+		line-height: var(--hero-sticker-lh);
+
+		&::before {
+			content: '';
+			width: 44px;
+			height: 40px;
+			margin-right: 10px;
+			background-image: url('../img/index/hero/atm.svg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}

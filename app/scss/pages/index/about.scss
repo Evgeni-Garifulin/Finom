@@ -1,0 +1,148 @@
+.about {
+	margin-bottom: 40px;
+
+	&__inner {
+		@include media-breakpoint-down(xl) {
+			padding: 92px 70px 0;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 72px 50px 0;
+		}
+
+		padding: 112px 90px 0;
+		border-radius: 24px;
+		background-color: var(--about-bg-cl);
+	}
+
+	&__title {
+		--about-title-fw: var(--fw-n);
+
+		margin-bottom: 24px;
+		font-weight: var(--about-title-fw);
+		text-transform: uppercase;
+	}
+
+	&__top {
+		@include media-breakpoint-down(lg) {
+			height: 310px;
+		}
+
+		height: 242px;
+	}
+
+	&__biography {
+		display: flex;
+		justify-content: space-between;
+		min-height: 236px;
+	}
+
+	&__info {
+		@include media-breakpoint-down(xl) {
+			margin-right: 40px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 50%;
+			margin-right: 20px;
+		}
+
+		max-width: 480px;
+		margin-right: 100px;
+	}
+
+	&__info-position {
+		margin-bottom: 12px;
+	}
+
+	&__quote {
+		@include media-breakpoint-down(lg) {
+			width: 50%;
+		}
+
+		max-width: 600px;
+		height: 100%;
+		padding: 32px 40px;
+		border-radius: 16px;
+		background-color: var(--about-quote-bg-cl);
+	}
+
+	&__quote-text {
+		&::before {
+			content: '';
+			display: block;
+			width: 36px;
+			height: 29px;
+			margin-bottom: 12px;
+			background-image: url('../img/index/about/quotes.svg');
+		}
+	}
+
+	&__photo {
+		@include media-breakpoint-down(xl) {
+			min-height: 290px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			min-height: 240px;
+			margin-top: 0;
+		}
+
+		@include media-breakpoint-down(md) {
+
+		}
+
+		display: flex;
+		min-height: 336px;
+		margin-top: 56px;
+	}
+
+	&__photo-card {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		opacity: .5;
+		cursor: pointer;
+		transition: opacity .3s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__photo-inner {
+		position: absolute;
+		bottom: -40px;
+		transition: all .3s;
+
+		&--active {
+			bottom: 0;
+		}
+	}
+
+	&__photo-name {
+		@include media-breakpoint-down(lg) {
+			bottom: 85%;
+		}
+
+		position: absolute;
+		opacity: 0;
+		transition: opacity .3s;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__photo-img {
+		@include media-breakpoint-down(xl) {
+			height: 100%;
+		}
+
+		height: 332px;
+	}
+}

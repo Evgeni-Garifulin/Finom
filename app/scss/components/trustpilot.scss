@@ -1,0 +1,23 @@
+.trustpilot {
+	display: flex;
+	align-items: center;
+
+	&__score {
+		margin-right: 12px;
+	}
+
+	&__stars {
+		display: inherit;
+		margin-right: 8px;
+	}
+
+	&__stars-icon {
+		&:not(:last-child) {
+			margin-right: 2px;
+		}
+	}
+
+	&__logo {
+		display: inherit;
+	}
+}

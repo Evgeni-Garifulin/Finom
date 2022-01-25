@@ -1,15 +1,15 @@
 // ===============================================
 // TYPOGRAPHY STYLES
 // ===============================================
-
+@import './utilities/grid/bootstrap-grid';
 
 :root {
 
 	// FONT FAMILY
 	// -----------------------------------------------
 
-	--ff-lato: 'Lato', 'Helvetica CY', 'Nimbus Sans L' sans-serif;
-	--ff-metropolis: 'Metropolis', 'Helvetica CY', 'Nimbus Sans L' sans-serif;
+	--ff-lato: 'Lato', 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+	--ff-metropolis: 'Metropolis', 'Helvetica CY', 'Nimbus Sans L', sans-serif;
 
 	// -----------------------------------------------
 	// FONT FAMILY
@@ -43,11 +43,39 @@
 	--fz-2xl: 22px;
 	--fz-3xl: 24px;
 
+	--fz-md-xs: 12px;
+	--fz-md-sm: 14px;
+	--fz-md-md: 15px;
+	--fz-md-lg: 16px;
+	--fz-md-xl: 18px;
+	--fz-md-2xl: 20px;
+	--fz-md-3xl: 22px;
+
+	--fz-sm-xs: 10px;
+	--fz-sm-sm: 12px;
+	--fz-sm-md: 13px;
+	--fz-sm-lg: 14px;
+	--fz-sm-xl: 16px;
+	--fz-sm-2xl: 18px;
+	--fz-sm-3xl: 20px;
+
 	--h1-fz: 68px;
 	--h2-fz: 48px;
 	--h3-fz: 32px;
 	--h4-fz: 24px;
 	--h5-fz: 20px;
+
+	--h1-md-fz: 48px;
+	--h2-md-fz: 32px;
+	--h3-md-fz: 24px;
+	--h4-md-fz: 22px;
+	--h5-md-fz: 18px;
+
+	--h1-sm-fz: 32px;
+	--h2-sm-fz: 24px;
+	--h3-sm-fz: 22px;
+	--h4-sm-fz: 18px;
+	--h5-sm-fz: 16px;
 
 	// -----------------------------------------------
 	// FONT SIZE
@@ -76,8 +104,112 @@
 
 	--text-primary-cl: var(--cl-indigo-100);
 	--text-secondary-cl: var(--cl-blue-350);
+	--text-info-cl: var(--cl-graphite-300);
+	--text-warning-cl: var(--cl-peach-300);
 	--text-light-cl: var(--cl-white);
 
 	// -----------------------------------------------
 	// TEXT COLORS
+
+
+	// LINK COLORS
+	// -----------------------------------------------
+
+	--link-primary-default-cl: var(--cl-indigo-100);
+	--link-secondary-default-cl: var(--cl-graphite-00);
+	--link-info-default-cl: var(--cl-graphite-300);
+	--link-light-default-cl: var(--cl-peach-300);
+
+	--link-primary-hover-cl: var(--cl-peach-300);
+	--link-secondary-hover-cl: var(--cl-indigo-100);
+	--link-info-hover-cl: var(--cl-indigo-100);
+	--link-light-hover-cl: var(--cl-peach-100);
+
+	// -----------------------------------------------
+	// LINK COLORS
 }
+
+
+// HEADINGS
+// -----------------------------------------------
+
+@for $i from 1 through 5 {
+	.h#{$i} {
+		@include media-breakpoint-down(lg) {
+			font-size: var(--h#{$i}-md-fz);
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: var(--h#{$i}-sm-fz);
+		}
+
+		font-family: var(--ff-metropolis);
+		font-size: var(--h#{$i}-fz);
+		font-weight: var(--h#{$i}-fw);
+		line-height: var(--h#{$i}-lh);
+	}
+}
+
+// -----------------------------------------------
+// HEADINGS
+
+
+// TEXT COLORS
+// -----------------------------------------------
+
+$text-colors: primary, secondary, light, info, warning;
+
+@each $text-color in $text-colors {
+	.text-#{$text-color} {
+		color: var(--text-#{$text-color}-cl);
+	}
+}
+
+// -----------------------------------------------
+// TEXT COLORS
+
+
+// TEXT SIZES
+// -----------------------------------------------
+
+$text-sizes: xs, sm, md, lg, xl, 2xl, 3xl;
+
+@each $text-size in $text-sizes {
+	.text-#{$text-size} {
+		@include media-breakpoint-down(lg) {
+			font-size: var(--fz-md-#{$text-size});
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: var(--fz-sm-#{$text-size});
+		}
+
+		font-size: var(--fz-#{$text-size});
+	}
+}
+
+// -----------------------------------------------
+// TEXT SIZES
+
+
+// LINKS
+// -----------------------------------------------
+
+$link-colors: primary, secondary, light, info;
+
+@each $link-color in $link-colors {
+	.link-#{$link-color} {
+		--link-#{$link-color}-cl: var(--link-#{$link-color}-default-cl);
+
+		color: var(--link-#{$link-color}-cl);
+		text-decoration: none;
+		transition: color .3s;
+
+		&:hover {
+			--link-#{$link-color}-cl: var(--link-#{$link-color}-hover-cl);
+		}
+	}
+}
+
+// -----------------------------------------------
+// LINKS

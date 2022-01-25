@@ -1,0 +1,43 @@
+.footer {
+	color: var(--footer-cl);
+
+	&__inner {
+		padding: 64px 110px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 64px;
+	}
+
+	&__social {
+		display: flex;
+	}
+
+	&__social-link {
+		display: block;
+		padding: 4px 8px;
+	}
+
+	&__content {
+		display: flex;
+		margin-bottom: 64px;
+	}
+
+	&__content-link {
+		&:not(:last-child) {
+			margin-right: 22px;
+		}
+	}
+
+	&__terms {
+		display: flex;
+		margin-bottom: 32px;
+	}
+
+	&__terms-link {
+		margin-left: 32px;
+	}
+}

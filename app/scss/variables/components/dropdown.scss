@@ -1,0 +1,18 @@
+:root {
+
+	// Basic
+	--dropdown-bg-cl: var(--cl-white);
+	--dropdown-cl: var(--cl-indigo-100);
+
+	// IMG
+	--dropdown-img-bg-cl: var(--cl-blue-900);
+	--dropdown-img-cl: var(--cl-peach-300);
+
+	// Item
+	--dropdown-item-default-bg-cl: var(--cl-white);
+	--dropdown-item-hover-bg-cl: var(--cl-blue-900);
+	--dropdown-item-active-bg-cl: var(--cl-blue-600);
+
+	--dropdown-item-default-cl: var(--cl-graphite-300);
+	--dropdown-item-active-cl: var(--cl-bindigo-100);
+}

@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-// const htmlValidator = require('gulp-w3c-html-validator');
+const htmlValidator = require('gulp-w3c-html-validator');
 const gulpHtmlBemValidator = require('gulp-html-bem-validator');
 const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
@@ -15,8 +15,7 @@ module.exports = function buildPug() {
 		.pipe(plumber())
 		.pipe(pug(gulpif(projectConfig.pugPrettify, { pretty: true })))
 		.pipe(flatten())
-		// .pipe(htmlValidator())
-		// .pipe(htmlValidator.reporter())
+		.pipe(htmlValidator())
 		.pipe(gulpHtmlBemValidator())
 		.pipe(gulp.dest(config.build.pug));
 };

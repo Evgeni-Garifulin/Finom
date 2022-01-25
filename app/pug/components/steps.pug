@@ -1,0 +1,53 @@
+include ../mixins/svg
+
+section.steps
+	.container
+		.steps__inner
+			h2.h2.steps__title 5 steps to get your expenses in control
+			.steps__content
+				.steps__card
+					.steps__card-img
+						+svg('card', '40', '28','icon steps__card-icon', 'Issue')
+					p.steps__card-description
+						strong.text-3xl.steps__card-title Issue 
+						|
+						br
+						| plastic and virtual 
+						br
+						| cards
+				.steps__card
+					.steps__card-img
+						+svg('gear', '40', '40','icon steps__card-icon', 'Customize')
+					p.steps__card-description
+						strong.text-3xl.steps__card-title Customize 
+						|
+						br
+						| card limits and spending policies
+				.steps__card
+					.steps__card-img
+						+svg('loupe', '40', '40','icon steps__card-icon', 'Tracking')
+					p.steps__card-description
+						strong.text-3xl.steps__card-title Track 
+						|
+						br
+						| expenses at 
+						br
+						| a glance
+				.steps__card
+					.steps__card-img
+						+svg('camera', '44', '38','icon steps__card-icon', 'Snap')
+					p.steps__card-description
+						strong.text-3xl.steps__card-title Snap 
+						|
+						br
+						| or upload 
+						br
+						| reciepts
+				.steps__card
+					.steps__card-img
+						+svg('calc', '32', '40','icon steps__card-icon', 'Import')
+					p.steps__card-description
+						strong.text-3xl.steps__card-title Import 
+						|
+						br
+						| accounting-ready data to&nbsp;your software

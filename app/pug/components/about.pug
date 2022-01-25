@@ -1,0 +1,90 @@
+include ../mixins/picture
+include ../mixins/picture
+
+section.about
+	.container
+		.about__inner
+			h2.text-warning.text-lg.about__title about us
+			#about__carousel.carousel.slide(data-interval='false')
+				.carousel-inner.about__top
+					.carousel-item.active
+						.about__biography
+							.about__info
+								h3.h2.about__info-name Olivier Binet
+								p.text-3xl.about__info-position Head of business in France
+								p.about__info-description 20&nbsp;years of&nbsp;experience in&nbsp;E-Commerce and FinTech, focusing on&nbsp;business development and innovation. Conducts independent coaching for startups development. Lives in&nbsp;Paris, France.
+							.about__quote
+								p.about__quote-text We&nbsp;are a&nbsp;team of&nbsp;successful, modern, serial entrepreneurs with vast experience in&nbsp;creating&nbsp;IT solutions. We&nbsp;entered banking to&nbsp;become technological challengers.
+					.carousel-item
+						.about__biography
+							.about__info
+								h3.h2.about__info-name Alena Valovaya
+								p.text-3xl.about__info-position Co-founder
+								p.about__info-description 4&nbsp;years in&nbsp;fintech.&nbsp;13&nbsp;years in&nbsp;HR, 3&nbsp;years in&nbsp;Marketing. Сonducts independent coaching with European ECF certification. Lives in&nbsp;Amsterdam, the Netherlands.
+							.about__quote
+								p.about__quote-text That&rsquo;s why we&rsquo;ve set up&nbsp;FINOM&nbsp;&mdash; a&nbsp;digital solution that helps you create, send and store invoices and electronic invoices. We&nbsp;wanted to&nbsp;build a&nbsp;place where you can grow your business and make money but not waste your time.
+					.carousel-item
+						.about__biography
+							.about__info
+								h3.h2.about__info-name Thomas Finan
+								p.text-3xl.about__info-position Head of business in Germany
+								p.about__info-description 20&nbsp;years of&nbsp;experience in&nbsp;E-Commerce and FinTech, focusing on&nbsp;business development and innovation. Conducts independent coaching for startups development. Lives in&nbsp;Paris, France.
+							.about__quote
+								p.about__quote-text We&nbsp;are a&nbsp;team of&nbsp;successful, modern, serial entrepreneurs with vast experience in&nbsp;creating&nbsp;IT solutions. We&nbsp;entered banking to&nbsp;become technological challengers.
+					.carousel-item
+						.about__biography
+							.about__info
+								h3.h2.about__info-name Ivo Dimitrov
+								p.text-3xl.about__info-position Head of business in Russia
+								p.about__info-description 20&nbsp;years of&nbsp;experience in&nbsp;E-Commerce and FinTech, focusing on&nbsp;business development and innovation. Conducts independent coaching for startups development. Lives in&nbsp;the best city in&nbsp;the world&nbsp;&mdash; Yekaterinburg, Russian Federation
+							.about__quote
+								p.about__quote-text We&nbsp;are a&nbsp;team of&nbsp;successful, modern, serial entrepreneurs with vast experience in&nbsp;creating&nbsp;IT solutions. We&nbsp;entered banking to&nbsp;become technological challengers.
+			.about__photo
+				.about__photo-card.active.about__photo-card--active(data-bs-target='#about__carousel' data-bs-slide-to='0')
+					.about__photo-inner.about__photo-inner--active
+						h3.text-lg.about__photo-name Olivier 
+							br
+							| Binet
+						+png-webp({
+							imgClass: 'w-100p d-block obj-c about__photo-img',
+							alt: 'Olivier Binet',
+							width: '280',
+							height: '316',
+							imgPath: 'index/about/olivier.png',
+						})
+				.about__photo-card(data-bs-target='#about__carousel' data-bs-slide-to='1')
+					.about__photo-inner
+						h3.text-lg.about__photo-name.about__photo-name--active Alena 
+							br
+							| Valovaya
+						+png-webp({
+							imgClass: 'w-100p d-block obj-c about__photo-img',
+							alt: 'Alena Valovaya',
+							width: '280',
+							height: '316',
+							imgPath: 'index/about/alena.png',
+						})
+				.about__photo-card(data-bs-target='#about__carousel' data-bs-slide-to='2')
+					.about__photo-inner
+						h3.text-lg.about__photo-name.about__photo-name--active Thomas 
+							br
+							| Finan
+						+png-webp({
+							imgClass: 'w-100p d-block obj-c about__photo-img',
+							alt: 'Thomas Finan',
+							width: '280',
+							height: '316',
+							imgPath: 'index/about/thomas.png',
+						})
+				.about__photo-card(data-bs-target='#about__carousel' data-bs-slide-to='3')
+					.about__photo-inner
+						h3.text-lg.about__photo-name.about__photo-name--active Ivo 
+							br
+							| Dmitrov
+						+png-webp({
+							imgClass: 'w-100p d-block obj-c about__photo-img',
+							alt: 'Ivo Dimitrov',
+							width: '280',
+							height: '316',
+							imgPath: 'index/about/ivo.png',
+						})

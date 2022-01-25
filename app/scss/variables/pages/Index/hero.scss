@@ -1,14 +1,20 @@
 :root {
 
-	// Content
-	--hero-content-figure-border-cl: var(--cl-purple-100);
-	--hero-content-title-cl: var(--cl-white);
+	// Basic
+	--hero-bg-cl: var(--cl-blue-900);
 
-	// Bottom
-	--hero-bottom-border-cl: var(--cl-graphite-100);
+	// Items
+	--hero-items-before-bg-cl: var(--cl-indigo-100);
 
-	// Column
-	--hero-column-link-default-cl: var(--cl-graphite-450);
-	--hero-column-link-hover-cl: var(--cl-white);
-	--hero-column-cl: var(--cl-graphite-400);
+	// Frame
+	--hero-frame-cl: var(--cl-white);
+	--hero-frame-bg-cl: var(--cl-blue-300);
+
+	// Video
+	--hero-video-button-cl: var(--cl-white);
+	--hero-video-button-bg-cl: var(--cl-indigo-100);
+
+	// sticker
+	--hero-sticker-cl: var(--cl-white);
+	--hero-sticker-bg-cl: var(--cl-blue-300);
 }

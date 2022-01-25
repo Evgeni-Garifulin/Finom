@@ -9,10 +9,19 @@
 @import './pages/layout/header';
 @import './pages/layout/footer';
 
+// Components
 @import './components/fonts';
+@import './components/button';
+@import './components/logo';
+@import './components/dropdown';
+@import './components/trustpilot';
 
-// Grid system
-@import './utilities/grid/bootstrap-grid';
+// Carousel
+@import './utilities/carousel/carousel';
 
 // Index
 @import './pages/index/hero';
+@import './pages/index/features';
+@import './pages/index/control';
+@import './pages/index/steps';
+@import './pages/index/about';

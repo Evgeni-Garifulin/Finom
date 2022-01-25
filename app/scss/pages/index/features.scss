@@ -1,0 +1,121 @@
+.features {
+	margin-bottom: 40px;
+	overflow: hidden;
+
+	&__inner {
+		@include media-breakpoint-down(xl) {
+			padding: 0 70px 0 50px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 0 50px 0 30px;
+		}
+
+		padding: 0 90px 0 70px;
+		border-radius: 24px;
+		background-color: var(--features-bg-cl);
+		color: var(--features-cl);
+	}
+
+	&__content {
+		position: relative;
+
+		&::after {
+			@include media-breakpoint-down(xl) {
+				width: 284px;
+			}
+
+			content: '';
+			position: absolute;
+			width: 344px;
+			height: 100%;
+			background-image: url('../img/index/features/pay.png');
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__badge {
+		position: absolute;
+		top: 25%;
+		right: 10%;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 155px;
+		height: 155px;
+		border-radius: 101px;
+		background-color: var(--features-badge-bg-cl);
+	}
+
+	&__badge-name {
+		--features-badge-fw: (--fw-b);
+
+		max-width: 116px;
+		font-weight: var(--features-badge-fw);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		@include media-breakpoint-down(xl) {
+			padding: 70px 0;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 50px 0;
+		}
+
+		padding: 112px 0;
+	}
+
+	&__description-list {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 48px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 32px;
+		}
+
+		margin-bottom: 64px;
+	}
+
+	&__description-title {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 48px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 32px;
+		}
+
+		margin-bottom: 64px;
+	}
+
+	&__item-stickers {
+		display: flex;
+		margin-bottom: 12px;
+	}
+
+	&__item-img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		margin-right: 8px;
+		border: 1px solid var(--features-sticker-border-cl);
+		border-radius: 10px;
+	}
+
+	&__button {
+		@include media-breakpoint-down(lg) {
+			padding: 16px 32px;
+		}
+
+		padding: 18px 40px;
+	}
+}
