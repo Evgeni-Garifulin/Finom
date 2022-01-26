@@ -18,6 +18,10 @@
 	}
 
 	&__content {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+
 		position: relative;
 
 		&::after {
@@ -66,6 +70,10 @@
 
 		@include media-breakpoint-down(lg) {
 			padding: 50px 0;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding: 50px 60px;
 		}
 
 		padding: 112px 0;

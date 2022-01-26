@@ -97,11 +97,13 @@ header.header
 									a.text-sm.dropdown__countries-link.dropdown__countries-link--france(href='#' aria-label='France') France
 								li.dropdown__menu-item.dropdown__countries
 									a.text-sm.dropdown__countries-link.dropdown__countries-link--germany(href='#' aria-label='Deutschland') Deutschland
-				a.link-light.text-sm.header__button(href='#' aria-label='Sign in') Sign in
-				a.button.text-sm.text-sm.header__button(href='#' aria-label='Get our card') Get card
-				button.link-light.header__burger(type='button' name='Mobile menu')
+				a.header__button.link-light.text-sm(href='#' aria-label='Sign in') Sign in
+				a.header__button.header__button--color.button.text-sm.text-sm(href='#' aria-label='Get our card') Get card
+				button.link-light.header__mobile-menu-toggle.header__burger.header__burger--active(type='button' name='Mobile menu')
 					+svg('burger','25', '25', 'icon header__burger-toggle')
-		.header__mobile(style='display: none;')
+				button.link-light.header__mobile-menu-toggle.header__close(type='button' name='Mobile menu')
+					+svg('cross','25', '25', 'icon header__burger-toggle')
+		.header__mobile
 			nav.header__mobile-menu
 				ul.header__mobile-list
 					li.header__mobile-item.link-primary.text-sm Products
@@ -114,3 +116,32 @@ header.header
 						+svg('arrow-down', '8', '5', 'icon header__mobile-drop-icon')
 					li.header__mobile-item
 						a.header__mobile-link.link-primary.text-sm(href='#' aria-label='Blog') Blog
+			.header__language.header__language--mobile.dropdown.dropdown--language.link-primary
+				span.text-sm.header__language-text.header__language-text--mobile en
+				+svg('arrow-down', '8', '5', 'icon dropdown__icon dropdown__icon--mobile')
+				.dropdown__menu.dropdown__menu--language.dropdown__menu--mobile
+					.dropdown__menu-triangle
+						p.text-xs.text-info.dropdown__text language
+						ul.dropdown__menu-list.dropdown__menu-list--languages
+							li.dropdown__menu-item.dropdown__languages
+								a.text-sm.dropdown__languages-link(href='#' aria-label='Italy language') it
+							li.dropdown__menu-item.dropdown__menu-item--active.dropdown__languages
+								a.text-sm.dropdown__languages-link(href='#' aria-label='English language') en
+						p.text-xs.text-info.dropdown__text country
+						ul.dropdown__menu-list
+							li.dropdown__menu-item.dropdown__menu-item--active.dropdown__countries
+								a.text-sm.dropdown__countries-link.dropdown__countries-link--italy(href='#' aria-label='Italia') Italia
+							li.dropdown__menu-item.dropdown__countries
+								a.text-sm.dropdown__countries-link.dropdown__countries-link--france(href='#' aria-label='France') France
+							li.dropdown__menu-item.dropdown__countries
+								a.text-sm.dropdown__countries-link.dropdown__countries-link--germany(href='#' aria-label='Deutschland') Deutschland
+			.header__mobile-button
+				a.header__button.header__button--mobile.link-light.text-sm(href='#' aria-label='Sign in') Sign in
+				a.header__button.header__button--mobile-color.button.text-sm.text-sm(href='#' aria-label='Get our card') Get card
+			.header__mobile-content
+				a.header__mobile-content-link(aria-label='Apple store' href='#')
+					img.d-block.header__mobile-content-img(src='img/index/footer/app-store.svg' alt='Apple store')
+				a.header__mobile-content-link(aria-label='Google play market' href='#')
+					img.header__mobile-content-img(src='img/index/footer/g-play.svg' alt='Google play market')
+			.header__mobile-info
+				p.text-info.text-xs FINOM (trade name of&nbsp;PNL Fintech B.V.), the company registered under number 74178784, office at&nbsp;Jachthavenweg 109&nbsp;H, 1081&nbsp;KM Amsterdam, the Netherlands, in&nbsp;France licenced under REGAFI identifier 88291&nbsp;as an&nbsp;agent of&nbsp;Treezor SAS (nr&nbsp;807&nbsp;465&nbsp;059).

@@ -82,7 +82,7 @@
 		}
 
 		&--language {
-			top: 56px;
+			top: 48px;
 			padding: 12px 0;
 
 			&::before {
@@ -109,6 +109,10 @@
 						45deg
 					);
 			}
+		}
+
+		&--mobile {
+			left: auto;
 		}
 	}
 

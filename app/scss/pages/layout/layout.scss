@@ -29,6 +29,10 @@ body {
 }
 
 .no-scroll {
+	@include media-breakpoint-up(lg) {
+		overflow: scroll;
+	}
+
 	overflow: hidden;
 }
 
@@ -39,7 +43,16 @@ body {
 	bottom: 0;
 	left: 0;
 	z-index: 4;
-	background-color: var(--ca-black-60);
+	display: none;
+	background-color: rgba(var(--indigo-100), .6);
+
+	&--active {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+
+		display: block;
+	}
 }
 
 .container {

@@ -11,6 +11,7 @@
 		}
 
 		@include media-breakpoint-down(lg) {
+			flex-direction: column;
 			padding: 142px 0 52px;
 		}
 
@@ -93,7 +94,11 @@
 		}
 
 		@include media-breakpoint-down(lg) {
-			width: 45%;
+			position: relative;
+			width: 110%;
+			height: 500px;
+			background-position: top;
+			background-size: cover;
 		}
 
 		position: absolute;

@@ -2,11 +2,16 @@
 	color: var(--footer-cl);
 
 	&__inner {
+		@include media-breakpoint-down(md) {
+			padding: 0 20px;
+		}
+
 		padding: 64px 110px;
 	}
 
 	&__top {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 64px;
@@ -22,22 +27,48 @@
 	}
 
 	&__content {
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+		}
+
 		display: flex;
 		margin-bottom: 64px;
 	}
 
 	&__content-link {
 		&:not(:last-child) {
+			@include media-breakpoint-down(xs) {
+				margin: 0 0 20px;
+			}
+
 			margin-right: 22px;
 		}
 	}
 
 	&__terms {
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+		}
+
 		display: flex;
 		margin-bottom: 32px;
 	}
 
+	&__terms-text {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 20px;
+		}
+	}
+
 	&__terms-link {
+		@include media-breakpoint-down(xs) {
+			margin: 0;
+
+			&:not(:last-child) {
+				margin: 0 0 20px;
+			}
+		}
+
 		margin-left: 32px;
 	}
 }
