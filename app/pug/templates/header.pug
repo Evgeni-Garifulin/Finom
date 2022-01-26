@@ -99,21 +99,77 @@ header.header
 									a.text-sm.dropdown__countries-link.dropdown__countries-link--germany(href='#' aria-label='Deutschland') Deutschland
 				a.header__button.link-light.text-sm(href='#' aria-label='Sign in') Sign in
 				a.header__button.header__button--color.button.text-sm.text-sm(href='#' aria-label='Get our card') Get card
-				button.link-light.header__mobile-menu-toggle.header__burger.header__burger--active(type='button' aria-label='Open mobile menu' name='Mobile menu')
-					+svg('burger','25', '25', 'icon header__burger-toggle')
-				button.link-light.header__mobile-menu-toggle.header__close(type='button' aria-label='Close mobile menu' name='Mobile menu')
-					+svg('cross','25', '25', 'icon header__burger-toggle')
+				.header__toggle
+					button.link-light.header__mobile-menu-toggle.header__burger.header__burger--active(type='button' aria-label='Open mobile menu' name='Mobile menu')
+						+svg('burger','25', '25', 'icon header__burger-toggle')
+					button.link-light.header__mobile-menu-toggle.header__close(type='button' aria-label='Close mobile menu' name='Mobile menu')
+						+svg('cross','25', '25', 'icon header__burger-toggle')
 		.header__mobile
 			nav.header__mobile-menu
 				ul.header__mobile-list
-					li.header__mobile-item.link-primary.text-sm Products
+					li.header__mobile-item.header__mobile-item-dropdown.link-primary.text-sm Products
 						+svg('arrow-down', '8', '5', 'icon header__mobile-drop-icon')
+					li.header__mobile-dropdown
+						.row.g-20
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Business account' href='#')
+									.dropdown__menu-link-img
+										+svg('receipt', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Business account
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Invoicing' href='#')
+									.dropdown__menu-link-img
+										+svg('list', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Invoicing
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Cards' href='#')
+									.dropdown__menu-link-img
+										+svg('card', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Cards
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Multi-Banking' href='#')
+									.dropdown__menu-link-img
+										+svg('multibanking', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Multi-Banking
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Cashback' href='#')
+									.dropdown__menu-link-img
+										+svg('gift', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Cashback
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Apple Pay' href='#')
+									.dropdown__menu-link-img
+										+svg('telephone', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Apple Pay
+							div(class='col-12 md:col-6')
+								a.link-primary.dropdown__menu-link(aria-label='Launch your business' href='#')
+									.dropdown__menu-link-img
+										+svg('rocket', '20', '20', 'icon dropdown__link-icon')
+									p.text-sm.dropdown__menu-link-text Launch your business
 					li.header__mobile-item
 						a.header__mobile-link.link-primary.text-sm(href='#' aria-label='Our pricing') Pricing
-					li.header__mobile-item.link-primary.text-sm Company
+					li.header__mobile-item.header__mobile-item-dropdown.link-primary.text-sm Company
 						+svg('arrow-down', '8', '5', 'icon header__mobile-drop-icon')
-					li.header__mobile-item.link-primary.text-sm Help
+					li.header__mobile-dropdown
+						ul.dropdown__menu-list
+							li.mb-20
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='About us') About&nbsp;us
+							li.mb-20
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Our projects') Our projects
+							li
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Work with us') Work with&nbsp;us
+					li.header__mobile-item.header__mobile-item-dropdown.link-primary.text-sm Help
 						+svg('arrow-down', '8', '5', 'icon header__mobile-drop-icon')
+					li.header__mobile-dropdown
+						ul.dropdown__menu-list
+							li.mb-20
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Terms') Terms & Conditions
+							li.mb-20
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Privacy policy') Privacy Policy
+							li.mb-20
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Conditions') Conditions
+							li
+								a.link-primary.text-sm.dropdown__menu-link(href='#' aria-label='Cookie police') Cookie Police
 					li.header__mobile-item
 						a.header__mobile-link.link-primary.text-sm(href='#' aria-label='Blog') Blog
 			.header__language.header__language--mobile.dropdown.dropdown--language.link-primary
