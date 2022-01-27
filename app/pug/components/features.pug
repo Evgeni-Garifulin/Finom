@@ -4,13 +4,13 @@ include ../mixins/picture
 section.features
 	.container
 		.features__inner
-			.row.gx-76
+			.row
 				div(class='md:col-6 lg:col-4 features__content')
 					.features__badge
 						.text-xl.features__badge-name up to 3% cashback
 				div(class='col-12 md:col-6 lg:col-8 features__description')
 					h2.h2.features__description-title FINOM Virtual Card&nbsp;&mdash; quick, flexible, secure
-					.row.gy-24.features__description-list
+					.row.row--gy-24.features__description-list
 						div(class='col-12 lg:col-6 features__item')
 							.features__item-stickers
 								.features__item-img
@@ -37,4 +37,4 @@ section.features
 									+svg('clock', '20', '20', 'icon features__item-icon', 'Clock')
 							p.h5.features__item-title Manage in real-time
 							p.features__item-text Set limits, freeze, track, top-up or&nbsp;block cards in&nbsp;just a&nbsp;minute from mobile or&nbsp;desktop
-					a.button.features__button(href='#' aria-label='Get our card') Get card
+					a.button.features__button(href='#' title='Get our card' aria-label='Get our card') Get card

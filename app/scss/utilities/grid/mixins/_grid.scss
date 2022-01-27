@@ -104,13 +104,13 @@
 			//
 			// Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
 			@each $key, $value in $gutters {
-				.#{$infix}g-#{$key},
-				.#{$infix}gx-#{$key} {
+				.#{$infix}row--g-#{$key},
+				.#{$infix}row--gx-#{$key} {
 					--#{$variable-prefix}gutter-x: #{$value};
 				}
 
-				.#{$infix}g-#{$key},
-				.#{$infix}gy-#{$key} {
+				.#{$infix}row--g-#{$key},
+				.#{$infix}row--gy-#{$key} {
 					--#{$variable-prefix}gutter-y: #{$value};
 				}
 			}

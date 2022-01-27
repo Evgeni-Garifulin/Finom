@@ -9,13 +9,13 @@ const sliderPhotoActivate = () => {
 		item.addEventListener('click', () => {
 			card[activePreview].classList.remove('about__photo-card--active');
 			image[activePreview].classList.remove('about__photo-inner--active');
-			name[activePreview].classList.add('about__photo-name--active');
+			name[activePreview].classList.remove('about__photo-name--active');
 
 			activePreview = i;
 
 			card[activePreview].classList.add('about__photo-card--active');
 			image[activePreview].classList.add('about__photo-inner--active');
-			name[activePreview].classList.remove('about__photo-name--active');
+			name[activePreview].classList.add('about__photo-name--active');
 		});
 	});
 }

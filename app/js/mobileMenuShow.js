@@ -28,7 +28,6 @@ const mobileMenuShow = () => {
 		closeButton.classList.remove('header__close--active');
 		openButton.classList.add('header__burger--active');
 	});
-	console.log(overlay);
 };
 
 export { mobileMenuShow };
